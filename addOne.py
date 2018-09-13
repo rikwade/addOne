@@ -16,13 +16,15 @@ def addOne(inArray):
         if (tmpArray[pos] > 9):
             tmpArray[pos] = 0
             carry = 1
-            if (pos == 0):
-                tmpArray.insert(0,1)
         else:
             carry = 0
+
+    if (carry == 1):
+        tmpArray.insert(0,1)
+
     return(tmpArray)
 
 #Main
-newArray = addOne([9,9,9,9,9,9])
+newArray = addOne([9,2])
 
 print("newArray:", newArray)
